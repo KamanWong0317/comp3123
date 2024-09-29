@@ -12,6 +12,7 @@ const port = process.env.PORT || 8081
 //Create Web Server using CORE API
 const server = http.createServer((req, res) => {
     if (req.method !== 'GET') {
+        res.writeHead(200, {'Content-Type': 'text/html'});
         res.end(`{"error": "${http.STATUS_CODES[405]}"}`)
     } else {
         // http://127.0.0.1:8081/ 
