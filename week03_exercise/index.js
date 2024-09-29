@@ -17,6 +17,7 @@ const server = http.createServer((req, res) => {
         // http://127.0.0.1:8081/ 
         if (req.url === '/') {
             //TODO - Display message "<h1>Welcome to Lab Exercise 03</h1>"
+            res.writeHead(200, {'Content-Type': 'text/html'}); 
             res.end("<h1>Welcome to Lab Exercise 03</h1>")
         }
 
